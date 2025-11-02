@@ -5,7 +5,8 @@
         {% for measurement in measurements %}
             {
                 "date": "{{ measurement.date | date('Y-m-d') }}",
-                "celsius": "{{ measurement.celsius }}"
+                "celsius": "{{ measurement.celsius }}",
+                "fahrehneit": "{{ measurement.fahrehneit }}"
             }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
